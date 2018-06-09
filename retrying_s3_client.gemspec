@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RetryingS3Client::VERSION
   spec.authors       = ["Fonsan"]
   spec.email         = ["fonsan@gmail.com"]
-
+  spec.homepage    = 'https://github.com/fonsan/retrying_s3_client'
+  
   spec.summary       = %q{Wraps Aws::S3::Client with a exponential backoff for 503 responses}
   spec.license       = "MIT"
 
