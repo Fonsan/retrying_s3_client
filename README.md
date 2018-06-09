@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'retrying_s3_client'
+require 'logger'
+s3 = Aws::S3::Client.new
+logger = Logger.new($stderr)
+retrying_s3_client = RetryingS3Client.wrap(s3, logger)
+retrying_s3_client.head_object(bucket: 'bucket', key: 'key') # Will retry with exponential backoff and logging attempts to logger
+```
 
 ## Development
 
